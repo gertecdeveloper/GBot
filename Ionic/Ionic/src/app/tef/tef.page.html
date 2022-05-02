@@ -1,0 +1,110 @@
+<ion-content>
+  <ion-grid class="lol">
+    <ion-row >
+      <ion-col>
+        <ion-row>
+          <ion-col>
+           Valor em R$
+            <ion-item>
+              <ion-input inputmode="numeric" type="tel" placeholder="10,00" required (ionBlur)="blurValor($event.target.value)" (ionChange)="formataNumero($event.target)" [(ngModel)]="valor" ></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            IP Servidor
+            <ion-item>
+              <ion-input  disabled="{{isDisabledIp}}" type="tel" inputmode="numeric" placeholder="192.168.0.1" [(ngModel)]="ip" id="ip"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            Pagamento a ser utilizado
+          </ion-col>
+          <ion-col>
+            Tipo de Parcelamento
+          </ion-col>
+        </ion-row>
+        <ion-row> 
+          <ion-col radio-group class="group-radio">
+            <ion-radio-group value="CREDITO" allow-empty-selection="false" name="radio-group" (ionChange)="pagamentoGroupChange($event)" >
+              <ion-row>
+                <ion-radio class="radio" value="CREDITO"></ion-radio>
+                <ion-label class="label-right">Crédito</ion-label>
+              </ion-row>
+              <ion-row>
+                <ion-radio item-right class="radio" value="DEBITO"></ion-radio>
+                <ion-label class="label-right">Débito</ion-label>
+              </ion-row>
+              <ion-row>
+                <ion-radio class="radio" value="TODOS"></ion-radio>
+                <ion-label class="label-right">
+                  <p>Todos</p>
+                </ion-label>
+              </ion-row>
+              <ion-row>
+                <ion-radio class="radio" value="CARTEIRADIGITAL"></ion-radio>
+                <ion-label class="label-right">
+                  <p>Carteira Digital</p>
+                </ion-label>
+              </ion-row>
+            </ion-radio-group>
+          </ion-col>
+          <ion-col radio-group class="group-radio">
+            <ion-radio-group value="Adm" allow-empty-selection="false" name="radio-group" (ionChange)="parcelamentoGroupChange($event)" >
+              <ion-row>
+                <ion-radio class="radio" value="Loja"></ion-radio>
+                <ion-label class="label-right">Parcelado Loja</ion-label>
+              </ion-row>
+              <ion-row>
+                <ion-radio item-right class="radio" value="Adm"></ion-radio>
+                <ion-label class="label-right">Parcelado Adm</ion-label>
+              </ion-row>
+            </ion-radio-group>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Número de Parcelas
+            <ion-item>
+              <ion-input  disabled="{{isDisabled}}" placeholder="0" required type="number" inputmode="numeric" min="0" max="4" [(ngModel)]="parcelas" id="parcelas"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button  style="width:100%" size="small" color="medium" class="buttonFrase1" (click)="enviarTransacao()">
+              <ion-label style="text-align: center;">
+                <h2>ENVIAR TRANSAÇÃO</h2>
+              </ion-label>
+            </ion-button>
+            <ion-button    style="width:100%" size="small" color="medium" class="buttonFrase1" (click)="cancelarTransacao()">
+              <ion-label style="text-align: center;">
+                <h2>CANCELAR TRANSAÇÃO</h2>
+              </ion-label>
+            </ion-button>
+            <ion-button    style="width:100%" size="small" color="medium" class="buttonFrase1" (click)="funcoes()">
+              <ion-label style="text-align: center;">
+                <h2>FUNÇÕES</h2>
+              </ion-label>
+            </ion-button>
+            <ion-button    style="width:100%" size="small" color="medium" class="buttonFrase1" (click)="reimpressao()" >
+              <ion-label style="text-align: center;">
+                <h2>REIMPRESSÃO</h2>
+              </ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+       
+        
+       
+      </ion-col>
+      <ion-col >
+        <h1 class="tefHeader"> Retorno TEF</h1>
+        <ion-textarea readonly  rows="19"  [(ngModel)]="boxRetornoTef" id="boxRetornoTef"></ion-textarea>
+      </ion-col>
+      
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>

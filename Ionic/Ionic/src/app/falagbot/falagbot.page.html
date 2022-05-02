@@ -1,0 +1,73 @@
+<ion-content [fullscreen]="true" padding="white" >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label style="text-align: center;">
+          <h1 class="title">Fala G-Bot</h1>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+            <ion-col>
+              <ion-button (click)="fala1()" size="large" color="medium" class="buttonFrase1">
+                <ion-label style="text-align: center;">
+                  <h2>FRASE 1</h2>
+                </ion-label>
+              </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="fala2()" size ="large" color="medium"  >
+              <ion-label style="text-align: center;">
+                <h2>FRASE 2</h2>
+              </ion-label>
+            </ion-button>
+            
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="fala3()" size ="large" color="medium">
+              <ion-label style="text-align: center;">
+                <h2>FRASE 3</h2>
+              </ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="falaPersonalizada()" size ="large" color="medium" >
+              <ion-label style="text-align: center;">
+                <h2>FRASE DIGITADA</h2>
+              </ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-col>
+            <ion-label style="text-align: center;">
+              <h2 class="digiteSuaFrase">Digite a sua frase aqui</h2>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item class="input-item">
+              <ion-label position="floating">Digite sua frase</ion-label>
+              <ion-input class="input-item" [(ngModel)]="mensagem" id="mensagem"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    
+   
+  </ion-grid>
+</ion-content>

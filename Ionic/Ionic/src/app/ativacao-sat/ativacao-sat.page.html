@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-grid>
+    <ion-row >
+      <ion-col >
+        <ion-item class="cnpj">
+          CNPJ Contribuinte:
+          <ion-input type="tel" class="textInput" inputmode="numeric" name="cnpj" [(ngModel)]="cnpj" [brmasker]="{mask:'00.000.000/0000-00', len:18}"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row >
+      <ion-col >
+        <ion-item class="cnpj">
+          Código de Ativação SAT:
+          <ion-input type="text" class="textInput" [(ngModel)]="codigoAtivar" ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col >
+        <ion-item class="cnpj">
+          Confirmação do Código:
+          <ion-input type="text" class="textInput" [(ngModel)]="confirmacaoCodigo" ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button   (click)="ativarSat()" size="medium" color="medium" >
+          <ion-label style="text-align: center;">
+            <h2>ATIVAR</h2>
+          </ion-label>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,50 @@
+
+.returnBox{
+  background-color: white;
+}
+
+ion-grid{
+  --ion-grid-padding: 0;
+  
+ 
+  
+
+}
+
+
+
+
+h1{
+  font-size: small;
+}
+.tefHeader{
+  font-size: xx-large;
+  text-align: center;
+}
+ion-button{
+
+  padding: 0;
+}
+
+ion-textarea{
+  background-color: lightgray;
+  width: 100%;
+  //height: 100%;
+}
+.group-radio ion-row {
+  margin: 3px 3px;
+  width: 100%;   
+}
+
+.group-radio ion-radio, .group-radio-2 ion-radio {
+  margin-right: 10px;
+}
+
+.group-radio p {
+  font-size: 16px;
+  //color: #000;
+}
+
+.col-api-radio {
+  margin: 0px 90px 0px 20px;
+}

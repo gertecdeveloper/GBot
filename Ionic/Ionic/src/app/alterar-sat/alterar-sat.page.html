@@ -1,0 +1,54 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" offset="3">
+       
+        <ion-item lines="none">
+         <ion-label><h1>Tipo de Código:</h1></ion-label>
+        <ion-select interface="popover" [selectedText]="categoriaOpcao" [(ngModel)]="categoriaOpcao" (ionChange)="optionsCodigo($event);">
+          <ion-select-option value="Código de ativação">Código de ativação</ion-select-option>
+          <ion-select-option value="Código de Emergência">Código de Emergência</ion-select-option>
+        </ion-select>
+       
+        </ion-item>
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row>
+        <ion-col offset="3" size="6"> 
+          <ion-item>
+            Atual:
+            <ion-input type="text" class="textInput" min="0" max="15" [(ngModel)]="atual"></ion-input>
+          </ion-item>
+        </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col offset="3" size="6">
+        <ion-item>
+          Novo:
+          <ion-input type="text" class="textInput" min="0" max="15" [(ngModel)]="novo"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset="3" size="6">
+        <ion-item>
+          Confirmar:
+          <ion-input type="text" class="textInput" min="0" max="15" [(ngModel)]="confirmar"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset="3" size="6">
+      
+        <ion-button (click)="alterarCodigo()" color="medium" size="medium" >ALTERAR</ion-button>
+      
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,120 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col  size="4">
+        <ion-item class="cnpj">
+         Código ativação:
+          <ion-input type="text" class="textInput"  min="0" max="15" [(ngModel)]="codigoAtivacao" ></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4">
+       
+        <ion-label><h1>DNS:</h1></ion-label>
+          <ion-select placeholder="hi" interface="popover" [selectedText]="dns"  [(ngModel)]="dns" (ionChange)="optionsDns($event);" >
+            <ion-select-option value="Sim">Sim</ion-select-option>
+            <ion-select-option value="Não">Não</ion-select-option>
+          </ion-select>
+       
+      </ion-col  >
+      <ion-col size="4" >
+        
+          <ion-label><h1>Proxy:</h1></ion-label>
+          <ion-select interface="popover" [selectedText]="proxy" [(ngModel)]="proxy" style="text-align: left;" (ionChange)="optionsProxy($event);">
+            <ion-select-option value="Não usa proxy">Não usa proxy</ion-select-option>
+            <ion-select-option value="Proxy com configuração">Proxy com configuração</ion-select-option>
+            <ion-select-option value="Proxy transparente">Proxy transparente</ion-select-option>
+          </ion-select>
+        
+      </ion-col>
+      
+    </ion-row>
+    <ion-row >
+      <ion-col size="4">
+        <ion-label><h1>Tipo de Rede:</h1></ion-label>
+        <ion-select interface="popover" [selectedText]="tipoRede" [(ngModel)]="tipoRede" (ionChange)="optionsRede($event);">
+          <ion-select-option value="Estático">Estático</ion-select-option>
+          <ion-select-option value="DHCP">DHCP</ion-select-option>
+        </ion-select>
+      </ion-col>
+      
+      <ion-col >
+        <ion-item>
+          DNS 1:
+          <ion-input *ngIf="dnsBool" class="textInput" type="tel" inputmode="numeric" min="0" max="15" [(ngModel)]="dns1"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col  size="4"  style="text-align: right;"  >
+        <ion-item>
+          Proxy Ip:
+          <ion-input *ngIf="proxyBool" class="textInput"  type="tel" inputmode="numeric" min="0" max="15" [(ngModel)]="proxyIp"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="4">
+        <ion-item class="cnpj">
+          IP SAT:
+          <ion-input *ngIf="tipoRedeBool" class="textInput" type="tel" inputmode="numeric" min="0" max="15" [(ngModel)]="ipSat"></ion-input>
+         </ion-item>
+      </ion-col>
+      <ion-col>
+        
+        <ion-item >
+          DNS 2:
+          <ion-input *ngIf="dnsBool" class="textInput" type="tel" inputmode="numeric" min="0" max="15" [(ngModel)]="dns2"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        
+        <ion-item>
+          Porta:
+          <ion-input *ngIf="proxyBool" class="textInput" type="tel" inputmode="numeric" min="0" max="15" [(ngModel)]="porta"></ion-input>
+        </ion-item>
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4">
+        <ion-item>
+          Máscara:
+          <ion-input *ngIf="tipoRedeBool" class="textInput" type="tel" inputmode="numeric" min="0" max="15" [(ngModel)]="mascara"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4" offset="4">
+        <ion-item>
+          User:
+          <ion-input *ngIf="proxyBool" class="textInput" type="text" [(ngModel)]="user"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4">
+        
+        <ion-item>
+          Gateway:
+          <ion-input *ngIf="tipoRedeBool" class="textInput" type="tel" inputmode="numeric" min="0" max="15" [(ngModel)]="gateway"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="4" offset="4" >
+        <ion-item>
+          Password:
+          <ion-input *ngIf="proxyBool" class="textInput" type="text" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button   (click)="configurarRede()" size="medium" color="medium" >
+          <ion-label style="text-align: center;">
+            <h2>ENVIAR</h2>
+          </ion-label>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

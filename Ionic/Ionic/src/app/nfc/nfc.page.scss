@@ -1,0 +1,37 @@
+ion-grid{
+  --ion-grid-padding: 0;
+  --ion-grid-width-xl: 20px;
+  
+}
+.input-item{
+  margin-top: 50px;
+  width: 400px;
+}
+ion-button{
+  margin-top: 20px;
+  width: 400px;
+}
+
+.nfc_icon{
+  position: absolute;
+  text-align: center;
+}
+
+.topMsg{
+  position: relative;
+  text-align: left;
+}
+
+.bottomMsg{
+  position: relative;
+  top: 200px;
+  left: 40px;
+  font-size: small;
+  color: gray;
+  font-weight: bold;
+}
+
+.outputItem{
+  position: relative;
+  top: 250px;
+}

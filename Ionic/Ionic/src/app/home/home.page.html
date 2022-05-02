@@ -1,0 +1,105 @@
+
+<ion-content [fullscreen]="true" padding="white" >
+  <ion-grid >
+    <ion-row class="Absolute-Center" >
+      <ion-col align-items-end>
+        <img src="assets/gertec_2.jpg" class="img">
+        <h1 class="title">Ionic - 1.0.0 - G-BOT</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col offset="5">
+        <ion-item button (click)="codigoBarras()"> <!-- (click)="testClick()" -->
+          <ion-thumbnail slot="start">
+            <img src="assets/barcode.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>Código de Barras</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col offset="5" >
+        <ion-item button (click)="nfc()">
+          <ion-thumbnail slot="start">
+            <img src="assets/nfc2.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>NFC-NDEF</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset="5" >
+        <ion-item button (click)="sensor()">
+          <ion-thumbnail slot="start">
+            <img src="assets/sensor.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>Sensor de Presença</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset="5" >
+        <ion-item button (click)="falaGBot()">
+          <ion-thumbnail slot="start">
+            <img src="assets/speaker.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>Fala G-Bot</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col offset="5" >
+        <ion-item button (click)="modoKiosk()">
+          <ion-thumbnail slot="start">
+            <img src="assets/kiosk.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>Modo Quiosque</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset="5" >
+        <ion-item button (click)="tef()">
+          <ion-thumbnail slot="start">
+            <img src="assets/tef.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>TEF</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset="5" >
+        <ion-item button (click)="sat()">
+          <ion-thumbnail slot="start">
+            <img src="assets/icon_sat.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>SAT</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+      
+  </ion-grid>
+</ion-content>
+
+
+

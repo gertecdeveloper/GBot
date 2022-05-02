@@ -1,0 +1,80 @@
+<ion-content>
+  <ion-grid>
+    <ion-row >
+      <ion-col class="colMain">
+        <ion-row>
+          <ion-col>
+            <ion-item class="cnpj">
+               CÓDIGO DE ATIVAÇÃO SAT:
+              <ion-input type="text" class="textInput" [(ngModel)]="codigoAtv" ></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+            <ion-button class="firstButton" size="medium" (click)="consultarSat()" color="medium" >
+              <ion-label >
+                <h2>CONSULTAR SAT</h2>
+              </ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+            <ion-button   size="medium" (click)="status()" color="medium" >
+              <ion-label >
+                <h2>STATUS OPERACIONAL</h2>
+              </ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+            <ion-button   (click)="testeFim()" size="medium" color="medium" >
+              <ion-label >
+                <h2>TESTE FIM A FIM</h2>
+              </ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+            <ion-button    (click)="enviarDados()" size="medium" color="medium" >
+              <ion-label >
+                <h2>ENVIAR DADOS DE VENDA</h2>
+              </ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+            <ion-button   (click)="cancelarVenda()" size="medium" color="medium" >
+              <ion-label >
+                <h2>STATUS CANCELAR VENDA</h2>
+              </ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+            <ion-button   (click)="consultarSessao()" size="medium" color="medium" >
+              <ion-label >
+                <h2>CONSULTAR SESSÃO</h2>
+              </ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-col  class="retornoText">
+            <h1 style="text-align: center;" class="tefHeader"> Retorno SAT</h1>
+            <ion-textarea readonly  rows="19" [(ngModel)]="boxRetornoSat" id="boxRetornoSat"></ion-textarea>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+   
+    
+  </ion-grid>
+</ion-content>

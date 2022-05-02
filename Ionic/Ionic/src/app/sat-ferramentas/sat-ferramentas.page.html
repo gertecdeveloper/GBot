@@ -1,0 +1,59 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+        <ion-col size="6" offset="3">
+          <ion-item>
+            Código de Ativação SAT:
+            <ion-input type="text" class="textInput" required min="0" max="15" [(ngModel)]="codigoAtivacao"></ion-input>
+          </ion-item>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6"  offset="3">
+        <ion-button (click)="bloquearSat()" color="medium">
+          Bloquear Sat
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6"  offset="3">
+        <ion-button (click)="desbloquearSat()" color="medium">
+          DESBLOQUEAR SAT
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" offset="3">
+        <ion-button (click)="extrairLog()" color="medium">
+          EXTRAIR LOG
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" offset="3">
+        <ion-button (click)="atualizarSoftware()" color="medium">
+          ATUALIZAR SOFTWARE
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" offset="3">
+        <ion-button (click)="verificarVersao()" color="medium">
+          VERIFICAR VERSÃO
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+
+
+
+
+</ion-content>
