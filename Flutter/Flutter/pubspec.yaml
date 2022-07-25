@@ -26,3 +26,6 @@ flutter:
   assets:
     - assets/images/
     - assets/xmlSat/
+
+module:
+  androidX: true
