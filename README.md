@@ -8,3 +8,7 @@
  Link abaixo:
  
  https://gertec.atlassian.net/servicedesk/customer/portal/26
+
+Manual de sdesenvolvimento Gbot:
+
+https://gertec.atlassian.net/servicedesk/customer/portal/26/article/57943879250870304
