@@ -1,4 +1,5 @@
-[![](https://pbs.twimg.com/media/EKzBdw7WwAQrq8J.png)](https://www.gertec.com.br/)
+
+[![EKzBdw7WwAQrq8J (1) (1)](https://github.com/gertecdeveloper/GBot/assets/60237221/a22d4737-43c9-4721-8acf-ca5fff58322f)](https://www.gertec.com.br/)
 
  ----------------------------------------------------------------------
 
