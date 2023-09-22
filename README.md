@@ -14,6 +14,7 @@
  
  ----------------------------------------------------------------------
 
-# Manual de desenvolvimento Gbot:
+# Manual de desenvolvimento Gbot
+<h2 align="center"> Link abaixo: </h2> 
 
 https://gertec.atlassian.net/servicedesk/customer/portal/26/article/57943879250870304
