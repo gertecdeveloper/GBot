@@ -1,4 +1,4 @@
-[![](https://pbs.twimg.com/media/EKzBdw7WwAQrq8J.png)](https://www.gertec.com.br/)
+[[](https://pbs.twimg.com/media/EKzBdw7WwAQrq8J.png)](https://www.gertec.com.br/)
 
  ----------------------------------------------------------------------
 
