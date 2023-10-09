@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.SHUTDOWN"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.REBOOT"
+        tools:ignore="ProtectedPermissions" />
+    <application
+        android:allowBackup="true"
+        android:exported="true"
+        tools:node="replace"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <activity android:name=".sensor.SensorActivity"
+            android:exported="false"/>
+        <activity android:name="KioskMode.KioskActivity"
+            android:exported="false"/>
+        <activity android:name=".fala.FalaActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Impressora"
+            android:exported="false"/>
+        <activity android:name=".DisplayActivity"
+            android:exported="false"/>
+        <activity android:name=".ExemploNFCIdRW.NfcExemplo"
+            android:exported="false"/>
+        <activity android:name=".CodigoBarras.LeituraCodigoActivity"
+            android:exported="false"/>
+        <activity android:name=".ExemploTEF.Tef"
+            android:exported="false"/>
+        <activity android:name=".ExemploSAT.SatPages.MenuSat"
+            android:exported="false"/>
+        <activity android:name=".ExemploSAT.SatPages.Teste"
+            android:exported="false"/>
+        <activity android:name=".ExemploSAT.SatPages.Rede"
+            android:exported="false"/>
+        <activity android:name=".ExemploSAT.SatPages.Ativacao"
+            android:exported="false"/>
+        <activity android:name=".ExemploSAT.SatPages.Associar"
+            android:exported="false"/>
+        <activity android:name=".ExemploSAT.SatPages.Ferramentas"
+            android:exported="false"/>
+        <activity android:name=".ExemploSAT.SatPages.Alterar"
+            android:exported="false"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".service.ReadCodeService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+    </application>
+
+</manifest>
